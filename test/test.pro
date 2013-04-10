@@ -6,9 +6,9 @@ DEFINES += QT_QWS_EBX BT_EMBEDDED BTWEB QT_NO_DEBUG_OUTPUT DEBUG
 DEFINES += BT_HARDWARE_X11
 DEFINES += LAYOUT_TS_10 # to check the SCREENSAVER audio state on DisplayControl
 
-INCLUDEPATH+= . .. ../ts_10 ../devices ../devices/test ../../stackopen/common_files ../../stackopen
+INCLUDEPATH+= . .. ../ts_10 ../../devices ../../devices/test ../../stackopen/common_files ../../stackopen
 INCLUDEPATH+= ../../stackopen/common_develer/lib
-DEPENDPATH+= . .. ../devices ../devices/test
+DEPENDPATH+= . .. ../../devices ../../devices/test
 
 TARGET = test
 CONFIG   += console
@@ -35,16 +35,11 @@ HEADERS += xmldevice_tester.h \
 	test_xmlclient.h \
 	test_xmldevice.h \
 	test_functions.h \
-	../devices/test/openserver_mock.h \
+	../../devices/test/openserver_mock.h \
 	../ts_10/audiostatemachine.h \
 	../btbutton.h \
-	../bttime.h \
-	../delayedslotcaller.h \
-	../devices_cache.h \
 	../displaycontrol.h \
 	../fontmanager.h \
-	../frame_classes.h \
-	../frame_functions.h \
 	../generic_functions.h \
 	../hardware_functions.h \
 	../icondispatcher.h \
@@ -54,7 +49,6 @@ HEADERS += xmldevice_tester.h \
 	../page.h \
 	../main.h \
 	../mediaplayer.h \
-	../openclient.h \
 	../scaleconversion.h \
 	../scenevodevicescond.h \
 	../screensaver.h \
@@ -65,7 +59,6 @@ HEADERS += xmldevice_tester.h \
 	../transitionwidget.h \
 	../window.h \
 	../windowcontainer.h \
-	../xml_functions.h \
 	../xmlclient.h \
 	../xmldevice.h
 
@@ -80,16 +73,11 @@ SOURCES += xmldevice_tester.cpp \
 	test_xmlclient.cpp \
 	test_xmldevice.cpp \
 	test_functions.cpp \
-	../devices/test/openserver_mock.cpp \
+	../../devices/test/openserver_mock.cpp \
 	../ts_10/audiostatemachine_x11.cpp \
 	../btbutton.cpp \
-	../bttime.cpp \
-	../delayedslotcaller.cpp \
-	../devices_cache.cpp \
 	../displaycontrol.cpp \
 	../fontmanager.cpp \
-	../frame_classes.cpp \
-	../frame_functions.cpp \
 	../generic_functions.cpp \
 	../hardware_functions_x11.cpp \
 	../icondispatcher.cpp \
@@ -97,7 +85,6 @@ SOURCES += xmldevice_tester.cpp \
 	../pagecontainer.cpp \
 	../pagestack.cpp \
 	../page.cpp \
-	../openclient.cpp \
 	../mediaplayer.cpp \
 	../scaleconversion.cpp \
 	../scenevodevicescond.cpp \
@@ -109,9 +96,8 @@ SOURCES += xmldevice_tester.cpp \
 	../transitionwidget.cpp \
 	../window.cpp \
 	../windowcontainer.cpp \
-	../xml_functions.cpp \
 	../xmlclient.cpp \
 	../xmldevice.cpp \
-	../definitions.cpp
 
-include(../devices.pri)
+HEADERS += ../../devices/*.h
+SOURCES += ../../devices/*.cpp
