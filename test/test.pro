@@ -6,9 +6,9 @@ DEFINES += QT_QWS_EBX BT_EMBEDDED BTWEB QT_NO_DEBUG_OUTPUT DEBUG
 DEFINES += BT_HARDWARE_X11
 DEFINES += LAYOUT_TS_10 # to check the SCREENSAVER audio state on DisplayControl
 
-INCLUDEPATH+= . .. ../ts_10 ../../devices ../../devices/test ../../stackopen/common_files ../../stackopen
+INCLUDEPATH+= . .. ../ts_10 ../../libqtdevices ../../libqtdevices/test ../../stackopen/common_files ../../stackopen
 INCLUDEPATH+= ../../stackopen/common_develer/lib
-DEPENDPATH+= . .. ../../devices ../../devices/test
+DEPENDPATH+= . .. ../../devices ../../libqtdevices/test
 
 TARGET = test
 CONFIG   += console
@@ -35,7 +35,7 @@ HEADERS += xmldevice_tester.h \
 	test_xmlclient.h \
 	test_xmldevice.h \
 	test_functions.h \
-	../../devices/test/openserver_mock.h \
+	../../libqtdevices/test/openserver_mock.h \
 	../ts_10/audiostatemachine.h \
 	../btbutton.h \
 	../displaycontrol.h \
@@ -73,7 +73,7 @@ SOURCES += xmldevice_tester.cpp \
 	test_xmlclient.cpp \
 	test_xmldevice.cpp \
 	test_functions.cpp \
-	../../devices/test/openserver_mock.cpp \
+	../../libqtdevices/test/openserver_mock.cpp \
 	../ts_10/audiostatemachine_x11.cpp \
 	../btbutton.cpp \
 	../displaycontrol.cpp \
@@ -99,5 +99,5 @@ SOURCES += xmldevice_tester.cpp \
 	../xmlclient.cpp \
 	../xmldevice.cpp \
 
-HEADERS += ../../devices/*.h
-SOURCES += ../../devices/*.cpp
+HEADERS += ../../libqtdevices/*.h
+SOURCES += ../../libqtdevices/*.cpp
