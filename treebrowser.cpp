@@ -207,6 +207,7 @@ void UPnpClientBrowser::reset()
 {
 	level = 0;
 	starting_element = 1;
+	context.clear();
 	emit isRootChanged();
 }
 
