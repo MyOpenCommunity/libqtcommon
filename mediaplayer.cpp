@@ -35,8 +35,13 @@
 #include <QVector>
 #include <QList>
 #include <QMetaEnum>
-#include <QtConcurrentRun>
 #include <QFutureWatcher>
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#include <QtConcurrent/QtConcurrentRun>
+#else
+#include <QtConcurrentRun>
+#endif
 
 #include <unistd.h>
 #include <fcntl.h>

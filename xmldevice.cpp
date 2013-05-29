@@ -645,7 +645,12 @@ QString XmlDevice::buildCommand(const QString &command, const XmlArguments &argu
 		while (it.hasNext())
 		{
 			it.next();
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+			QString v(it.value());
+			cmd += QString("			<%1>%2</%1>\n").arg(it.key()).arg(v.toHtmlEscaped());
+#else
 			cmd += QString("			<%1>%2</%1>\n").arg(it.key()).arg(Qt::escape(it.value()));
+#endif
 		}
 		cmd += QString("		</%1>").arg(command);
 	}
