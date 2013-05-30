@@ -23,8 +23,9 @@
 #ifndef MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS
 #include "hardware_functions.h" // maxWidth, maxHeight, getAudioCmdLine
 #endif
-#include "displaycontrol.h"
+
 #ifdef LAYOUT_TS_10
+#include "displaycontrol.h"
 #include "audiostatemachine.h"
 #endif
 
@@ -36,6 +37,8 @@
 #include <QList>
 #include <QMetaEnum>
 #include <QFutureWatcher>
+#include <QMap>
+#include <QTime>
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 #include <QtConcurrent/QtConcurrentRun>
