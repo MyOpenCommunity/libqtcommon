@@ -22,7 +22,7 @@
 #ifndef LIST_MANAGER_H
 #define LIST_MANAGER_H
 
-#include "generic_functions.h" // EntryInfoList
+#include "entryinfo.h" // EntryInfoList
 #include "xmldevice.h" // XmlResponse
 
 #include <QObject>

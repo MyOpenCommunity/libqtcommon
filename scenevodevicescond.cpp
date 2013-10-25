@@ -25,6 +25,7 @@
 #include "lighting_device.h"
 #include "media_device.h" // AmplifierDevice, AuxDevice
 #include "scaleconversion.h" // bt2Celsius, bt2Fahrenheit, celsius2Bt, fahrenheit2Bt
+#include "definitions.h"
 
 #include <QStringList>
 #include <QDebug>

@@ -20,7 +20,8 @@
 
 
 #include "scaleconversion.h"
-#include "main.h"
+// The simbol of temperature degrees
+#define TEMP_DEGREES "\272"
 
 #include <cmath>
 

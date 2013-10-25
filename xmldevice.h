@@ -20,7 +20,7 @@
 #ifndef XMLDEVICE_H
 #define XMLDEVICE_H
 
-#include "generic_functions.h" // EntryInfoList
+#include "entryinfo.h" // EntryInfoList
 
 #include <QObject>
 #include <QVariant>

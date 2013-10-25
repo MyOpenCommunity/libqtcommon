@@ -24,9 +24,13 @@
 
 #include <QList>
 
-#include "main.h" // TemperatureScale
 #include "pulldevice.h" // DeviceValues, PullMode
 
+enum TemperatureScale
+{
+    CELSIUS = 0,
+    FAHRENHEIT,
+};
 
 class QString;
 class QLabel;
