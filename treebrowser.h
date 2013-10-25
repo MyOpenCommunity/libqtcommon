@@ -21,7 +21,7 @@
 #define TREEBROWSER_H
 
 #include "xmldevice.h"
-#include "generic_functions.h"
+#include "entryinfo.h"
 
 #include <QDir>
 #include <QString>

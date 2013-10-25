@@ -21,7 +21,9 @@
 #include "xmlclient.h"
 #include "xml_functions.h"
 
+#if QT_VERSION <= QT_VERSION_CHECK(5, 0, 0)
 #include <QTextDocument> // Qt::escape
+#endif
 #include <QDomDocument>
 #include <QStringList>
 #include <QUuid>
