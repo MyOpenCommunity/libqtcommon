@@ -437,8 +437,6 @@ protected:
 private:
 	// Maximum and minimum values for temperature conditions
 	int max_temp, min_temp;
-
-	TemperatureScale temp_scale;
 };
 
 

@@ -1012,7 +1012,7 @@ DeviceConditionTemperature::DeviceConditionTemperature(DeviceConditionDisplayInt
 	// Temp condition is expressed in bticino format
 	int temp_condition = trigger.toInt();
 
-	temp_scale = static_cast<TemperatureScale>((*bt_global::config)[TEMPERATURE_SCALE].toInt());
+	TemperatureScale temp_scale = static_cast<TemperatureScale>((*bt_global::config)[TEMPERATURE_SCALE].toInt());
 	switch (temp_scale)
 	{
 	case CELSIUS:
@@ -1061,6 +1061,7 @@ QString DeviceConditionTemperature::getConditionAsString()
 	// transform an int value to a string in bticino 4-digit form
 	int val = DeviceCondition::get_condition_value();
 	int temp;
+	TemperatureScale temp_scale = static_cast<TemperatureScale>((*bt_global::config)[TEMPERATURE_SCALE].toInt());
 	switch (temp_scale)
 	{
 	case CELSIUS:
@@ -1088,6 +1089,7 @@ bool DeviceConditionTemperature::parseValues(const DeviceValues &values_list)
 
 	qDebug("Current temperature %d", temp);
 	int measured_temp;
+	TemperatureScale temp_scale = static_cast<TemperatureScale>((*bt_global::config)[TEMPERATURE_SCALE].toInt());
 	switch (temp_scale)
 	{
 	case CELSIUS:
